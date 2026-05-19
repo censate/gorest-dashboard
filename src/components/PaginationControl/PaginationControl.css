@@ -1,0 +1,13 @@
+.pagination-control {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 16px;
+  padding: 16px;
+  background-color: #ffffff;
+  border-radius: 8px;
+}
+
+.pagination-control__select {
+  width: 80px;
+}

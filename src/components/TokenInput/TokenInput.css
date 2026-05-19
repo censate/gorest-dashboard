@@ -1,0 +1,11 @@
+.token-input {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  flex: 1;
+  max-width: 500px;
+}
+
+.token-input .TextField {
+  flex: 1;
+}

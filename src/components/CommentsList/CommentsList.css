@@ -1,0 +1,27 @@
+.comments-list {
+  margin-top: 24px;
+}
+
+.comments-list__title {
+  margin-bottom: 16px;
+}
+
+.comment-item {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.comment-item__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.comment-item__body {
+  color: #333;
+  line-height: 1.5;
+}
