@@ -11,7 +11,7 @@ export const LoginPage = () => {
 
   const handleSave = () => {
     if (!value || !value.trim()) {
-      setError("Токен не может быть пустым");
+      setError("Токен не может быть пустым.");
       return;
     }
     setError("");
