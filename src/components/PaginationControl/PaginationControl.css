@@ -2,12 +2,130 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 16px;
-  padding: 16px;
-  background-color: #ffffff;
-  border-radius: 8px;
+  margin-top: 20px;
+  padding: 18px 22px;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
-.pagination-control__select {
-  width: 80px;
+.pagination-pages {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pagination-btn {
+  padding: 9px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.03);
+  color: #7b8ca3;
+  border-radius: 8px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+  font-weight: 500;
+}
+
+.pagination-btn:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.08);
+  color: #c8d6e5;
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.pagination-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.pagination-numbers {
+  display: flex;
+  gap: 5px;
+}
+
+.page-num {
+  min-width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.03);
+  color: #7b8ca3;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.page-num:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #c8d6e5;
+}
+
+.page-num.active {
+  background: #0fb9b1;
+  color: #ffffff;
+  border-color: #0fb9b1;
+  box-shadow: 0 2px 8px rgba(15, 185, 177, 0.3);
+}
+
+.page-dots {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #4a5a6e;
+  font-size: 16px;
+  letter-spacing: 2px;
+  user-select: none;
+}
+
+.per-page-select {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.per-page-label {
+  color: #5a7a8a;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.per-page-buttons {
+  display: flex;
+  gap: 4px;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 8px;
+  padding: 3px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.per-page-option {
+  padding: 7px 12px;
+  border: none;
+  background: transparent;
+  color: #7b8ca3;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.per-page-option:hover {
+  color: #c8d6e0;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.per-page-option.active {
+  background: #0fb9b1;
+  color: #ffffff;
 }

@@ -1,7 +1,6 @@
 import { useNavigate, useLocation } from "react-router-dom";
 import { Button } from "@consta/uikit/Button";
 import { useAuthStore } from "../../store/authStore";
-import type { ViewMode } from "../../types";
 import "./Navigation.css";
 
 export const Navigation = () => {
@@ -9,33 +8,24 @@ export const Navigation = () => {
   const location = useLocation();
   const isValid = useAuthStore((state) => state.isValid());
 
-  const currentMode: ViewMode = location.pathname.includes("/posts")
-    ? "posts"
-    : "users";
-
-  const handleModeChange = (mode: ViewMode) => {
-    if (mode === "users") {
-      navigate("/users");
-    } else {
-      navigate("/posts");
-    }
-  };
-
   if (!isValid) return null;
+
+  const isUsers =
+    location.pathname.includes("/users") || location.pathname === "/";
 
   return (
     <div className="navigation">
       <Button
         label="Пользователи"
-        view={currentMode === "users" ? "primary" : "secondary"}
+        view={isUsers ? "primary" : "secondary"}
         size="s"
-        onClick={() => handleModeChange("users")}
+        onClick={() => navigate("/users")}
       />
       <Button
         label="Посты"
-        view={currentMode === "posts" ? "primary" : "secondary"}
+        view={!isUsers ? "primary" : "secondary"}
         size="s"
-        onClick={() => handleModeChange("posts")}
+        onClick={() => navigate("/posts")}
       />
     </div>
   );
